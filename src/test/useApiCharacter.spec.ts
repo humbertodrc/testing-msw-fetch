@@ -1,12 +1,10 @@
 import { renderHook, waitFor, } from "@testing-library/react";
 import { data } from "../../mock/characters";
 import {useApiCharacter} from "../../src/hooks/useApiCharacter";
+import { url } from '../api/endPoint';
 
 
 describe("Pruebas en useApiCharacter.ts", () => {
-	;
-
-  const url = `https://rickandmortyapi.com/api/character`;
 
   test("Debe retornar la información deseada", async () => {
 

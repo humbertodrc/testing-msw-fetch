@@ -1,3 +1,4 @@
+import { url } from '../../api/endPoint';
 import {useApiCharacter} from "../../hooks/useApiCharacter";
 import "./style.css";
 
@@ -13,7 +14,7 @@ export interface CharacterI {
 // eslint-disable-next-line @typescript-eslint/no-redeclare
 const Character = () => {
 	
-	const url = `https://rickandmortyapi.com/api/character`;
+	
 
 	const {character, isLoading, error} = useApiCharacter(url);
 
