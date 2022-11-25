@@ -3,7 +3,7 @@ import {rest} from "msw";
 
 const data = {
 	id: 1,
-	name: "Humberto Rivero",
+	name: "Rick Sanchez",
 	status: "Alive",
 	species: "Human",
 	type: "",
@@ -75,19 +75,15 @@ const data = {
 };
 
 const handlers = [
-	rest.get(
-		`https://rickandmortyapi.com/api/character`,
-		(req, res, ctx) => {
-			console.log("here")
-			return res(
-				ctx.status(200),
-				ctx.json({
-					results: data,
-				})
-			);
-		}
-	),
+	rest.get(`https://rickandmortyapi.com/api/character`, (req, res, ctx) => {
+		console.log("here");
+		return res(
+			ctx.status(200),
+			ctx.json({
+				results: data,
+			})
+		);
+	}),
 ];
-  
-export {data, handlers};
 
+export {data, handlers};
